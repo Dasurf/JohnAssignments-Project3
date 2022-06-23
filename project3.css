@@ -1,0 +1,157 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --purple: linear-gradient(to right, rgb(132, 83, 239), rgb(103, 33, 255));
+    --white: rgb(249, 249, 249);
+    --deepblue: rgb(22, 22, 35);
+}
+
+body {
+    background-color: rgb(238, 234, 247);
+    font-family: Tahoma, sans-serif;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headerdiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.headerdiv > div {
+    background-image: var(--purple);
+    width: 40px;
+    height: 25px;
+    padding: 2px;
+    align-self: center;
+    border-radius: 20px;
+}
+
+.smallcircle {
+    width: 20px;
+    height: 21px;
+    background-color: var(--white);
+    border-radius: 50%;
+    float: right;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 250px;
+    color: var(--deepblue);
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+p {
+    font-size: 12px;
+}
+
+
+main > div p {
+    font-size: 12px;
+}
+
+main > div .linedivs {
+    border-bottom: 1px solid rgb(207, 197, 197);
+    padding: 2px 0;
+    text-align: center;
+    width: 100%
+}
+
+.midbox:not(button) {
+    padding: 20px;
+    background-image: var(--purple);
+    color: var(--white);
+    height: 340px;
+}
+
+.midboxbutton {
+    width: 100%;
+    color: rgb(103, 33, 255);
+    background-color: white; 
+    padding: 8px 0;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+button {
+    width: 100%;
+    color: var(--white);
+    /* background-image: var(--purple); */
+    background-color: rgb(103, 33, 255);
+    padding: 8px 0;
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 5px;
+    font-size: 10px;
+    font-weight: bold;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+
+.spiraltop {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 450px;
+    z-index: -1;
+}
+
+.spiralbottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 300px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 600px) {
+    main > div:not(first-child) {
+        margin: 10px 5px;
+    }
+
+    .spiraltop {
+        width: 200px;
+        top: -20px;
+    }
+
+    .spiralbottom {
+        width: 0;
+        height: 0;
+    }
+}
